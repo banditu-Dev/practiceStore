@@ -1,0 +1,276 @@
+/* 🔧 Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6fa;
+  color: #1c1c1c;
+}
+
+/* 🔹 Layout Containers */
+.hold {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.store, .checkout-page, .bought-page {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-top: 40px;
+}
+
+/* 🔸 Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+/* 🛍️ Products */
+.products {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product {
+  border: 1px solid #e3e3e3;
+  padding: 20px;
+  border-radius: 12px;
+  width: 240px;
+  text-align: center;
+  background: #fafafa;
+  transition: 0.2s ease;
+}
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.product h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.product p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+.product button {
+  padding: 8px 16px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.product button:hover {
+  background: #333;
+}
+
+/* 🧾 Cart Section */
+.cart {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px solid #ddd;
+}
+.cart ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.cart li {
+  margin-bottom: 8px;
+}
+.cart button {
+  margin-left: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.checkout {
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.checkout:hover {
+  background: #218838;
+}
+
+/* 📩 Email Input */
+.email-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.email-form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.email-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline-color: #0070ba;
+  background: #fff;
+}
+
+/* ✅ Bought / Success Page */
+.bought-page h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.bought-page p {
+  margin-bottom: 10px;
+}
+.support {
+  background: #f0f0f0;
+  border-left: 4px solid #0070ba;
+  padding: 15px;
+  margin: 25px auto;
+}
+.support a {
+  color: #0070ba;
+  text-decoration: underline;
+}
+.back {
+  display: inline-block;
+  margin-top: 30px;
+  color: #0070ba;
+  text-decoration: none;
+  font-weight: bold;
+}
+.back:hover {
+  text-decoration: underline;
+}
+
+/* 💸 PayPal Button */
+#paypal-button-container {
+  margin-top: 30px;
+}
+
+/* 🧱 Utility */
+ul {
+  list-style-type: disc;
+}
+.downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.file-card {
+  padding: 20px;
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  border-left: 6px solid #0070ba;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.file-card h3 {
+  margin-bottom: 6px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  background: #0070ba;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+.download-btn:hover {
+  background: #005a98;
+}
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.review-form input,
+.review-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.review-form button {
+  background: #0070ba;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.review-form button:hover {
+  background: #005a98;
+}
+
+.reviews-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  border-left: 5px solid #0070ba;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.review-card img {
+  margin-top: 10px;
+  border-radius: 8px;
+  max-height: 200px;
+}
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-date {
+  color: #999;
+  font-size: 0.85rem;
+}
+.review-image {
+  margin-top: 10px;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
