@@ -15,7 +15,7 @@ function Reviews() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/reviews')
+    fetch('https://practicestoreback.onrender.com/api/reviews')
       .then(res => res.json())
       .then(data => setReviews(data));
   }, []);
@@ -30,7 +30,7 @@ function Reviews() {
     form.append('message', formData.message);
     if (formData.image) form.append('image', formData.image);
 
-    const res = await fetch('http://localhost:4000/api/reviews/new', {
+    const res = await fetch('https://practicestoreback.onrender.com/api/reviews/new', {
       method: 'POST',
       body: form
     });
@@ -70,7 +70,7 @@ function Reviews() {
                     <p>{r.message}</p>
                     {r.image && (
                     <img
-                        src={`http://localhost:4000${r.image}`}
+                        src={`https://practicestoreback.onrender.com${r.image}`}
                         alt="Review"
                         className="review-image"
                     />

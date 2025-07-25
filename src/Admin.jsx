@@ -10,7 +10,7 @@ function AdminPanel() {
   const [passwordInput, setPasswordInput] = useState('');
 
   const login = async (tokenToTest = passwordInput.trim()) => {
-    const res = await fetch('http://localhost:4000/api/reviews/all', {
+    const res = await fetch('https://practicestoreback.onrender.com/api/reviews/all', {
       headers: {
         Authorization: `Bearer ${tokenToTest}`
       }
@@ -37,7 +37,7 @@ function AdminPanel() {
 
   const approveReview = async (id) => {
     const token = localStorage.getItem('adminToken');
-    await fetch(`http://localhost:4000/api/reviews/approve/${id}`, {
+    await fetch(`https://practicestoreback.onrender.com/api/reviews/approve/${id}`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`
@@ -48,7 +48,7 @@ function AdminPanel() {
 
   const deleteReview = async (id, image) => {
     const token = localStorage.getItem('adminToken');
-    await fetch(`http://localhost:4000/api/reviews/delete/${id}`, {
+    await fetch(`https://practicestoreback.onrender.com/api/reviews/delete/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ function AdminPanel() {
               <h3>{r.name} ({r.email})</h3>
               <p>{r.message}</p>
               <p><strong>Status:</strong> {r.approved ? '✅ Approved' : '❌ Not Approved'}</p>
-              {r.image && <img src={`http://localhost:4000${r.image}`} alt="Attachment" className="review-image" />}
+              {r.image && <img src={`https://practicestoreback.onrender.com${r.image}`} alt="Attachment" className="review-image" />}
               <div style={{ marginTop: '10px' }}>
                 {!r.approved && (
                   <button style={{ marginRight: '10px' }} onClick={() => approveReview(r.id)}>✅ Approve</button>
