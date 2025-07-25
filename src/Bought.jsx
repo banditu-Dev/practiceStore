@@ -39,11 +39,11 @@ function Bought() {
       !purchasedProducts.length
     ) return;
 
-    hasSentEmail.current = true; // ⛔ prevent further sends in this component session
+    hasSentEmail.current = true; 
 
     const productLinks = purchasedProducts.map(p => {
       const fileName = p.file.split('/').pop();
-      return `Download Link: http://localhost:4000/download/${fileName} | Name: ${p.name}`;
+      return `Download Link: https://practicestoreback.onrender.com/download/${fileName} | Name: ${p.name}`;
     }).join('\n');
 
     const templateParams = {
